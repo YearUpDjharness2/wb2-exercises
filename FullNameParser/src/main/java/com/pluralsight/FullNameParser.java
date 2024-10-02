@@ -4,15 +4,26 @@ public class FullNameParser {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String formatOne = PromptForString("Enter First, Last: ");
-        String formatTwo = PromptForString("Enter First, Middle, Last: ");
+        String formatOne = promptForString("Enter First and Last Name:" );
+        String formatTwo = promptForString("Enter First, Middle and Last Name: ");
+
+        System.out.println("First Name: \nLast Name: " + formatOne);
+        System.out.println(formatTwo);
+        if (formatTwo.isBlank()){
+            formatTwo = "none";
+        }
 
 
-        public static String PromptForString (String prompt);
-        {
+
+
+
+
+    }
+
+
+        public static String promptForString(String prompt) {
+
             System.out.print(prompt);
             return scanner.nextLine().trim();
         }
-
     }
-}
